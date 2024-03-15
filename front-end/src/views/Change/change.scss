@@ -1,0 +1,92 @@
+
+  
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  h1 {
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin-left: -15%;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+  }
+  
+  span {
+    font-size: 12px;
+  }
+  
+  a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+  }
+  
+  button {
+    border-radius: 20px;
+    border: 1px solid #4096ff;
+    background-color: #4096ff;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button.ghost {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+  
+
+  
+
+  .container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+  }
+  
+  .change-password {
+    position: relative; /* 使用固定定位以使其相对于视窗进行定位 */
+    left: 30%; /* 左边距离视窗左侧的距离为视窗宽度的一半 */
+    margin-top: 20%; /* 上边距离视窗顶部的距离为视窗高度的一半 */
+    // transform: translate(-50%, -50%); /* 使用变换将元素向左和向上移动其自身宽度和高度的一半，以实现居中 */
+    width: 50%; /* 设置元素宽度 */
+    z-index: 2; /* 设置 z 轴层叠顺序 */
+    text-align: center; 
+  }
+
+  .custom-input{
+    width: 100%;
+  }
+  

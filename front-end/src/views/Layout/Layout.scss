@@ -1,0 +1,151 @@
+* {
+    font-family: sans-serif;
+
+}
+
+body {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    height: 80%;
+    // margin: 10%;
+}
+
+
+/*************** header ***************/
+.header {
+    color: #fff;
+    // padding: 1rem 0;
+    /*position: fixed;*/
+    // top: -10px;
+    background-color: #0a146e;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#title {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    width: 30px;
+    height: 30px;
+}
+
+#sign-in {
+    color: #fff;
+    font-weight: 700;
+}
+
+#change{
+    color: #fff;
+    font-weight: 700;
+}
+
+
+#sign-in:hover{
+    color: #fff;
+    font-weight: 700;
+    background-color: rgba( #fff, 0.3);
+}
+
+#sign-up{
+
+    font-weight: 700;
+}
+
+
+
+
+
+#title-container {
+    position: relative; /* 设置为相对定位，以便子元素绝对定位时相对于它 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-color: #0a146e;
+    z-index: 1;
+    width: 100vw;
+    border-radius: 0%;
+}
+
+
+#app-title {
+    text-align: center;
+    font-size: 250%;
+    font-family: sans-serif;
+    color: #fff;
+    margin-top: -10%;
+    // max-width: 15ch;
+}
+
+
+#content-section {
+    position: absolute; /* 设置为绝对定位，以便脱离文档流 */
+    top: 70%; /* 相对于父容器垂直居中 */
+    left: 20%; /* 相对于父容器水平居中 */
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    align-items: center;
+    // padding-bottom: 10rem;
+    margin-top: -20%;
+    z-index: 3;
+
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 60vw;
+    height: 50vh;
+}
+
+#content-section > .ant-row {
+    width: 100%; /* 设置 <Row> 的宽度为父容器的 80% */
+    margin: 0 auto; /* 让 <Row> 在水平方向上居中 */
+}
+
+
+.custom-input {
+    width: 100%;
+}
+
+.custom-arrow{
+    display: flex;
+    justify-content: center; /* 水平居中对齐 */
+    align-items: flex-end; /* 底端对齐 */
+    margin-bottom: 1.5%;
+}
+
+
+
+.custom-modal {
+    .ant-modal-content {
+      border: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+    }
+  }
+
+
+.centered{
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+
+.custom-row {
+    display: flex;
+    align-items: flex-start;
+  }
