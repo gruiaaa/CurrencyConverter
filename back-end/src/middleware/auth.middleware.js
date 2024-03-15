@@ -26,7 +26,7 @@ const auth = async(ctx,next) =>{
         const { authorization} = ctx.request.header
         const token = authorization.replace('Bearer ','')
         if (isInTokenBlacklisted(token)) {
-            console.error("Token 已被加入黑名单");
+            console.error("Token is blocked");
             ctx.app.emit('error', authorizedFailed, ctx);
             return;
         }
@@ -37,15 +37,15 @@ const auth = async(ctx,next) =>{
     } catch (error) {
         switch(error.name){
             case 'TokenExpiredError':
-                console.error("Token已经过期")
+                console.error("TokenExpiredError")
                 ctx.app.emit('error', TokenExpiredError, ctx)
                 return
             case 'JsonWebTokenError':
-                console.error("验证失败11")
+                console.error("AuthorizeError")
                 ctx.app.emit('error', JsonWebTokenError, ctx)
                 return
             default:
-                console.error("验证失败",error)
+                console.error("AuthorizeError",error)
                 ctx.app.emit('error', authorizedFailed, ctx)
                 return
         }

@@ -94,8 +94,8 @@ export default function Login({ closeLoginModal }) {
     return new Promise((resolve, reject) => {
       if (!value) {
         reject('Please input your password!');
-      } else if (value.length < 6) {
-        reject(`Length of ${rule.field} should be at least 6 characters!`);
+      } else if (value.length < 6 ||value.length >32) {
+        reject(`Length of ${rule.field} should be [6,32]`);
       } else {
         resolve();
       }

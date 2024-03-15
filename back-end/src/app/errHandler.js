@@ -13,8 +13,14 @@ module.exports = (err, ctx) => {
         case '10004':
             status = 401
             break
+        case '10006':
+            status = 422
+            break
+        case '10007':
+            status = 422
+            break
         case '40001':
-            status = 401
+            status = 400
             break
         case '40002':
             status = 401

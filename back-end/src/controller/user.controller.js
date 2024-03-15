@@ -33,7 +33,7 @@ class UserController {
             ctx.state = 200
             ctx.body = {
                 code: '0',
-                message: "用户登录成功",
+                message: "User login success!",
                 result: {
                     token: jwt.sign(res, JWT_SECRET, { expiresIn: '1d' })
                 }
@@ -52,7 +52,7 @@ class UserController {
             if (await updateByID({ id, password })) {
                 ctx.body = {
                     code: '0',
-                    message: "修改密码成功",
+                    message: "Change Password success!",
                     result: ""
                 }
             }

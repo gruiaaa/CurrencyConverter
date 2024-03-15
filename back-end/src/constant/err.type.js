@@ -19,6 +19,17 @@ module.exports = {
         message: "The user's password is wrong",
         result: ''
     },
+
+    passwordFormatError: {
+        code: '10006',
+        message: "password Format Error",
+        result: ''
+    },
+    passwordLengthError:{
+        code: '10007',
+        message: "password Length Error",
+        result: ''
+    },
     extraFieldsError: {
         code: '40001',
         message: "extra Fields Error",
@@ -26,7 +37,7 @@ module.exports = {
     },
     TokenExpiredError: {
         code: '40002',
-        message: "Token已经过期",
+        message: "Token Expired Error",
         result: ""
     },
     JsonWebTokenError: {
