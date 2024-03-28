@@ -29,7 +29,7 @@ const Layout = ({ user, setUser }) => {
   const [currencyError, setcurrencyError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/currency/list')
+    axios.get('https://miguelbrazil-adrianepoxy-8000.codio-box.uk/currency/list')
       .then(response => {
         const processedOptions = response.data.result.data.map(option => ({
           ...option,
@@ -90,7 +90,7 @@ const Layout = ({ user, setUser }) => {
         };
         const token = JSON.parse(localStorage.getItem('currency')).token
 
-        axios.get('http://127.0.0.1:8000/currency/convert', {
+        axios.get('https://miguelbrazil-adrianepoxy-8000.codio-box.uk/currency/convert', {
           params,
           headers: {
             Authorization: `Bearer ${token}`
@@ -147,7 +147,7 @@ const Layout = ({ user, setUser }) => {
 
   const handleLogOut = () => {
     const token = JSON.parse(localStorage.getItem('currency')).token
-    axios.patch('http://127.0.0.1:8000/users/logout', {
+    axios.patch('https://miguelbrazil-adrianepoxy-8000.codio-box.uk/users/logout', {
       headers: {
         'Authorization': 'Bearer ' + token
       }
