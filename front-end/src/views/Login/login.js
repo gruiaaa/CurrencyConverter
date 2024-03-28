@@ -21,7 +21,7 @@ export default function Login({ closeLoginModal }) {
     delete modifiedValues.email; 
     delete modifiedValues.confirm; 
 
-    axios.post('http://127.0.0.1:8000/users/register', modifiedValues)
+    axios.post('https://miguelbrazil-adrianepoxy-8000.codio-box.uk/users/register', modifiedValues)
     .then(response => {
       // 检查后端返回的数据，这里假设后端返回一个包含用户信息的对象
       if (response.status === 200) {
@@ -48,7 +48,7 @@ export default function Login({ closeLoginModal }) {
     const modifiedValues = { ...values, user_email: values.email };
     delete modifiedValues.email; 
     // 发送登录请求到后端
-    axios.post('http://127.0.0.1:8000/users/login', modifiedValues)
+    axios.post('https://miguelbrazil-adrianepoxy-8000.codio-box.uk/users/login', modifiedValues)
       .then(response => {
         // 检查后端返回的数据，这里假设后端返回一个包含用户信息的对象
         if (response.status == 200) {
