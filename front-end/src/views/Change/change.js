@@ -37,7 +37,7 @@ export default function ChangeInfo({ closeChangeModal }) {
 
     const token = JSON.parse(localStorage.getItem('currency')).token
     // headers: { 'Authorization': 'Bearer ' + getToken() }
-    axios.patch('http://127.0.0.1:8000/users', modifiedValues, {
+    axios.patch('https://miguelbrazil-adrianepoxy-8000.codio-box.uk/users', modifiedValues, {
       headers: {
         'Authorization': 'Bearer ' + token
       }
